@@ -6,9 +6,9 @@ pkg load image
 
 %1.jpg Rectangles.png TPS.jpg Tigre.jpg
 filename = "1.jpg";
-savefile = strcat(filename,'.mat');
+savefile = strcat("save/", filename,'.mat');
 
-img = imread(filename);
+img = imread(strcat("img/", filename));
 if(size(size(img), 2) == 3)
     img = rgb2gray(img);
 end
